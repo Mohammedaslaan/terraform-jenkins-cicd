@@ -5,7 +5,7 @@ resource "aws_instance" "myec2vm" {
   tags = {
     "Name" = "Ec2 Demo ${count.index}"
   }
-  count = 5
+  count = 1
   key_name = var.instance_keypair
   vpc_security_group_ids = [
     aws_security_group.terraform2-SG-ssh.id,
