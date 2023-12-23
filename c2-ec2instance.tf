@@ -1,7 +1,7 @@
 resource "aws_instance" "myec2vm" {
   ami = data.aws_ami.amzlinux2.id
   instance_type = var.instance_type_list[0]
-  user_data = filebase64("${path.module}/app1-install.sh")
+  user_data = filebase64("${path.module}/app1-installl.sh")
   tags = {
     "Name" = "Ec2 Demo ${count.index}"
   }
